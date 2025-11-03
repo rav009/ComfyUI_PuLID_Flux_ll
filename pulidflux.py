@@ -602,7 +602,7 @@ def clean_hook(diffusion_model):
         diffusion_model.forward_orig = diffusion_model.old_forward_orig_for_pulid
         del diffusion_model.old_forward_orig_for_pulid
 
-def pulid_outer_sample_wrappers_with_override(wrapper_executor, noise, latent_image, sampler, sigmas, denoise_mask=None, callback=None, disable_pbar=False, seed=None):
+def pulid_outer_sample_wrappers_with_override(wrapper_executor, noise, latent_image, sampler, sigmas, denoise_mask=None, callback=None, disable_pbar=False, seed=None, latent_shapes=None):
     cfg_guider = wrapper_executor.class_obj
     PULID_model_patch = add_model_patch_option(cfg_guider, PatchKeys.pulid_patch_key_attrs)
     PULID_model_patch['latent_image_shape'] = latent_image.shape
