@@ -43,6 +43,7 @@ Simply use `PulidFluxFaceNetLoader` instead of `PulidFluxInsightFaceLoader` in y
     git clone https://github.com/lldacing/ComfyUI_PuLID_Flux_ll.git
     cd ComfyUI_PuLID_Flux_ll
     pip install -r requirements.txt
+    pip isntall facenet-pytorch --no-deps
     # restart ComfyUI
 ```
 
@@ -78,7 +79,7 @@ Failed to build insightface
 **For Commercial Use (Recommended):**
 - **FaceNet** - No additional downloads required! Uses `facenet-pytorch` with pre-trained VGGFace2 models
   - ✅ Commercial license friendly
-  - ✅ No external model downloads
+  - ✅ Automatic download model (Model [vggface2](https://github.com/timesler/facenet-pytorch/releases/download/v2.2.9/20180402-114759-vggface2.pt) will be downloaded to `~/.cache/torch/checkpoints/20180402-114759-vggface2.pt`)
   - ✅ Automatic model loading
   - Use with `PulidFluxFaceNetLoader` node
 

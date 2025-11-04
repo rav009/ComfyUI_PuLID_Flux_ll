@@ -43,6 +43,7 @@ ComfyUI主体版本需要>=0.3.7
     git clone https://github.com/lldacing/ComfyUI_PuLID_Flux_ll.git
     cd ComfyUI_PuLID_Flux_ll
     pip install -r requirements.txt
+    pip isntall facenet-pytorch --no-deps
     # 重启 ComfyUI
 ```
 安装问题:
@@ -77,7 +78,7 @@ Failed to build insightface
 **用于商业用途（推荐）：**
 - **FaceNet** - 无需额外下载！使用带有预训练VGGFace2模型的`facenet-pytorch`
   - ✅ 商业许可证友好
-  - ✅ 无需外部模型下载
+  - ✅ 模型下载 (会自动下载 [vggface2](https://github.com/timesler/facenet-pytorch/releases/download/v2.2.9/20180402-114759-vggface2.pt) 到 `~/.cache/torch/checkpoints/20180402-114759-vggface2.pt`)
   - ✅ 自动模型加载
   - 配合`PulidFluxFaceNetLoader`节点使用
 
