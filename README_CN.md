@@ -43,7 +43,7 @@ ComfyUI主体版本需要>=0.3.7
     git clone https://github.com/lldacing/ComfyUI_PuLID_Flux_ll.git
     cd ComfyUI_PuLID_Flux_ll
     pip install -r requirements.txt
-    pip isntall facenet-pytorch --no-deps
+    pip install facenet-pytorch --no-deps
     # 重启 ComfyUI
 ```
 安装问题:

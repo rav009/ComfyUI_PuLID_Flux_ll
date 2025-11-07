@@ -43,7 +43,7 @@ Simply use `PulidFluxFaceNetLoader` instead of `PulidFluxInsightFaceLoader` in y
     git clone https://github.com/lldacing/ComfyUI_PuLID_Flux_ll.git
     cd ComfyUI_PuLID_Flux_ll
     pip install -r requirements.txt
-    pip isntall facenet-pytorch --no-deps
+    pip install facenet-pytorch --no-deps
     # restart ComfyUI
 ```
 
