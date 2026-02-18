@@ -1,3 +1,7 @@
+# Addition Noted from the forker:
+- This is the nightly version forked on 2026/2/18, to solve the import error, be sure to execute the cmd "pip install facenet-pytorch --no-deps" (facenet-pytorch limits torch<2.3.0, so use command: pip install facenet-pytorch --no-deps)
+- The previous version 1.1.4 in Comfyui Manager has an error "TypeError: pulid_outer_sample_wrappers_with_override() got an unexpected keyword argument 'latent_shapes'". The workaround of this error is [Here]（https://github.com/lldacing/ComfyUI_PuLID_Flux_ll/issues/90）, and in this nightly version this error has been solved by adding "**kwargs" in the function.
+
 [中文文档](README_CN.md)
 
 - Solved [ComfyUI-PuLID-Flux](https://github.com/balazik/ComfyUI-PuLID-Flux) model pollution problem.
