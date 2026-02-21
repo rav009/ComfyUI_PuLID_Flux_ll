@@ -26,7 +26,12 @@ from .patch_util import PatchKeys, add_model_patch_option, set_model_patch
 # facenet implementation
 import numpy as np
 from PIL import Image
-from facenet_pytorch import MTCNN, InceptionResnetV1
+
+try:
+    from facenet_pytorch import MTCNN, InceptionResnetV1
+except ImportError as e:
+    print("facenet-pytorch limits torch<2.3.0, so use command: pip install facenet-pytorch --no-deps")
+
 def tensor2pil(image):
     return Image.fromarray(np.clip(255. * image.cpu().numpy().squeeze(), 0, 255).astype(np.uint8))
 
