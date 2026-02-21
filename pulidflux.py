@@ -30,9 +30,9 @@ from PIL import Image
 try:
     from facenet_pytorch import MTCNN, InceptionResnetV1
 except ImportError as e:
-    print("""ComfyUI_PuLID_Flux_ll:\n
-                ImportError: facenet-pytorch is required for the 'PulidFluxFaceNetLoader' node. The node is not necessary, you can use PulidFluxInsightFaceLoader node instead.\n
-                facenet-pytorch limits torch<2.3.0, so use command to install: pip install facenet-pytorch --no-deps""")
+    print("""[ComfyUI_PuLID_Flux_ll]ImportError: facenet-pytorch is required for the 'PulidFluxFaceNetLoader' node. 
+[ComfyUI_PuLID_Flux_ll]The node is optional - you can use the 'PulidFluxInsightFaceLoader' node as an alternative (recommended).
+[ComfyUI_PuLID_Flux_ll]facenet-pytorch has a dependency constraint (torch<2.3.0). To install it, run the following command:pip install facenet-pytorch --no-deps""")
 
 def tensor2pil(image):
     return Image.fromarray(np.clip(255. * image.cpu().numpy().squeeze(), 0, 255).astype(np.uint8))
